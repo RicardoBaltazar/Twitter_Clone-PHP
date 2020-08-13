@@ -1,0 +1,10 @@
+.banner {
+    background-color: #b3afaf;
+    padding: 15px 50px;
+    margin: 10px 0;
+}
+
+.perfil-photo {
+    width: 200px;
+    border-radius: 50%;
+}
