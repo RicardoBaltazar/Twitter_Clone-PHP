@@ -1,15 +1,16 @@
-let http = require('http')
+const express = require('express')
+const app = express()
 
-let server = http.createServer(function(req, res){
-    let categoria = req.url
-
-    if(categoria == '/tecnologia'){
-        res.end('<html><body>tecnologia</body></html>')
-    } else if (categoria == '/moda') {
-        res.end('<html><body>moda</body></html>')
-    } else {
-        res.end('<html><body>Ola mundo</body></html>')
-    }
+app.get('/', function(req, res){
+    res.send('Ola Mundo!!')
 })
 
-server.listen(8000)
+app.listen(8000, function(){
+    console.log('servidor rodando na porta 8000')
+})
+
+
+/*
+ npm install express -save -> baixar o express para dentro do projeto
+
+*/
