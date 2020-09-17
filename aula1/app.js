@@ -1,9 +1,4 @@
-const express = require('express')
-const app = express()
-
-let msg = require('./modeTeste')
-
-app.set('view engine', 'ejs')
+let app = require('./config/server')
 
 app.get('/', function(req, res){
     res.render('home/index')
@@ -19,7 +14,6 @@ app.get('/noticias', function(req, res){
 
 app.listen(8000, function(){
     console.log('servidor rodando na porta 8000')
-    console.log(msg)
 })
 
 
