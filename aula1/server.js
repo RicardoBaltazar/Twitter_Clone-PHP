@@ -23,5 +23,7 @@ app.listen(8000, function(){
 /*
  npm install express -save -> baixar o express para dentro do projeto
  npm install ejs -save
+ npm install nodemon -D -> instalar localmente
+ adicione o script -> "dev": "nodemon server.js"
 
 */
