@@ -3,11 +3,9 @@ let app = require('./config/server')
 let rotaHome = require('./app/routes/home')
 rotaHome(app)
 
-let rotaNoticias = require('./app/routes/noticias')
-rotaNoticias(app)
+let rotaNoticias = require('./app/routes/noticias')(app)
 
-let rotaInclusaoNoticias = require('./app/routes/form_inclusao_noticia')
-rotaInclusaoNoticias(app)
+let rotaInclusaoNoticias = require('./app/routes/form_inclusao_noticia')(app) //declarando e já chamando a função
 
 app.listen(8000, function(){
     console.log('servidor rodando na porta 8000')
