@@ -1,16 +1,13 @@
 let app = require('./config/server')
 
-app.get('/', function(req, res){
-    res.render('home/index')
-})
+let rotaHome = require('./app/routes/home')
+rotaHome(app)
 
-app.get('/form_inclusao_noticia', function(req, res){
-    res.render('admin/form_add_noticia')
-})
+let rotaNoticias = require('./app/routes/noticias')
+rotaNoticias(app)
 
-app.get('/noticias', function(req, res){
-    res.render('noticias/noticias')
-})
+let rotaInclusaoNoticias = require('./app/routes/form_inclusao_noticia')
+rotaInclusaoNoticias(app)
 
 app.listen(8000, function(){
     console.log('servidor rodando na porta 8000')
